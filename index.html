@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing test game</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header">
+      <i class="fas fa-hourglass-end"></i>
+      Typing Speed Test Game
+      <i class="fas fa-american-sign-language-interpreting"></i>
+    </div>
+    <div class="startgame">
+      <button class="start-button">Start Playing</button>
+    </div>
+    <div class="game">
+      <div class="container">
+        <div class="info">
+          <div class="level">
+            <span>Difficulty level:</span>
+            <select name="difficulty" id="level">
+              <option value="Easy">Easy</option>
+              <option value="Normal">Normal</option>
+              <option value="Hard">Hard</option>
+              <option value="Expert">Expert</option>
+            </select>
+          </div>
+          <div class="seconds-left"><span>Level seconds:</span> <span></span></div>
+        </div>
+        <div class="the-word"></div>
+        <input type="text" class="input" placeholder="Random Words..." />
+        <div class="upcoming-words"></div>
+        <div class="control">
+          <div class="score"><span>Score:</span> <span>0</span> out of <span></span></div>
+          <div class="time"><span>Time left:</span> <span></span> <span>seconds</span></div>
+        </div>
+        <div class="finish"></div>
+      </div>
+    </div>
+    <button class="try-again">Try Again</button>
+    <div class="footer">Copyright &copy; <span class="year"></span>. All rights reserved</div>
+    <audio id="start-music" src="gamestart.mp3" preload="auto"></audio>
+
+    <script src="js/file.js"></script>
+  </body>
+</html>

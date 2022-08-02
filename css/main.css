@@ -1,0 +1,449 @@
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:root {
+  --main-color: #2196f3;
+  --secondary-color: #00bcd4;
+  --main-transition: 0.3s;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  background-color: #eee;
+  font-family: "Cairo", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
+
+div.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 0;
+  color: white;
+  background-color: var(--main-color);
+  font-size: 30px;
+  font-weight: bold;
+  position: relative;
+  box-shadow: 1px 0 12px 0 rgb(0 0 0 / 40%);
+}
+div.header::after {
+  content: "Made by Mohamed Gamal";
+  position: absolute;
+  bottom: 7px;
+  right: 10px;
+  font-size: 14px;
+}
+div.header i:first-child {
+  color: #1a1a1aba;
+  margin-right: 10px;
+}
+div.header i:last-child {
+  font-size: 25px;
+  margin-left: 10px;
+}
+.startgame {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 90%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.startgame button.start-button {
+  padding: 15px 30px;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  background-color: var(--main-color);
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+  animation: rubberBand 1s both infinite;
+  -webkit-animation: rubberBand 1s both infinite;
+}
+.startgame button.start-button:hover {
+  opacity: 0.8;
+}
+
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1);
+    -webkit-transform: scale3d(1, 1, 1);
+    -moz-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    -o-transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    -moz-transform: scale3d(1.25, 0.75, 1);
+    -ms-transform: scale3d(1.25, 0.75, 1);
+    -o-transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    -moz-transform: scale3d(0.75, 1.25, 1);
+    -ms-transform: scale3d(0.75, 1.25, 1);
+    -o-transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    -moz-transform: scale3d(1.15, 0.85, 1);
+    -ms-transform: scale3d(1.15, 0.85, 1);
+    -o-transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    -moz-transform: scale3d(0.95, 1.05, 1);
+    -ms-transform: scale3d(0.95, 1.05, 1);
+    -o-transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    -moz-transform: scale3d(1.05, 0.95, 1);
+    -ms-transform: scale3d(1.05, 0.95, 1);
+    -o-transform: scale3d(1.05, 0.95, 1);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+    -webkit-transform: scale3d(1, 1, 1);
+    -moz-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    -o-transform: scale3d(1, 1, 1);
+  }
+}
+.game {
+  flex: 1;
+}
+.game .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin: 40px 0 30px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  background-color: white;
+}
+.game .info .level span:first-of-type,
+.game .info .seconds-left span:first-of-type {
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--main-color);
+}
+.game .info .level select#level,
+.game .info .seconds-left span:last-of-type {
+  margin-left: 5px;
+  font-size: 17px;
+}
+.game .info .level select#level {
+  border: none;
+  outline: none;
+  user-select: none;
+  cursor: pointer;
+}
+.game .the-word {
+  margin: 15px 0;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  color: var(--main-color);
+  user-select: none;
+}
+.game .input {
+  width: 100%;
+  padding: 15px 0;
+  font-size: 22px;
+  text-align: center;
+  color: var(--main-color);
+  caret-color: var(--main-color);
+  border: 1px solid var(--main-color);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.game .input:focus {
+  outline: 2px solid var(--main-color);
+}
+.game .input::placeholder {
+  font-size: 18px;
+  display: inline-block;
+  opacity: 0.2;
+  padding-right: 0.15em;
+  white-space: nowrap;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+.game .input:focus::-webkit-input-placeholder {
+  opacity: 0.05;
+  font-size: 75%;
+  transform: translateY(-125%);
+  -webkit-transform: translateY(-125%);
+  -moz-transform: translateY(-125%);
+  -ms-transform: translateY(-125%);
+  -o-transform: translateY(-125%);
+}
+.game .input.imitatefocus::-webkit-input-placeholder {
+  opacity: 0.05;
+  transform: translateY(-125%);
+  -webkit-transform: translateY(-125%);
+  -moz-transform: translateY(-125%);
+  -ms-transform: translateY(-125%);
+  -o-transform: translateY(-125%);
+}
+.game .upcoming-words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  background-color: white;
+}
+.upcoming-words div {
+  padding: 7px 15px;
+  color: white;
+  background-color: var(--main-color);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.game .control {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  margin: 10px 0 20px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  background-color: white;
+}
+.game .control .score span:first-of-type,
+.game .control .time span:first-of-type {
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--main-color);
+}
+.game .control .score span:nth-of-type(2) {
+  margin-left: 5px;
+  color: var(--secondary-color);
+}
+.game .control .score span:last-of-type {
+  color: var(--secondary-color);
+}
+.game .control .time span:nth-of-type(2) {
+  margin-left: 5px;
+}
+.game .control .time span:last-of-type {
+  font-size: 15px;
+}
+.game .finish {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  margin-top: 20px;
+  font-size: 65px;
+  font-weight: bold;
+  display: none; /* Change to: display: flex; */
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #2196f39e;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.game .finish span,
+.game .finish span {
+  position: relative;
+  animation: fadeIn 4s 1;
+  -webkit-animation: fadeIn 4s 1;
+}
+.game .finish span.good::after {
+  content: "\f164";
+}
+.game .finish span.bad::after {
+  content: "\f165";
+}
+.game .finish span.good::after,
+.game .finish span.bad::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+button.try-again {
+  display: none; /* Change to: display: block; */
+  padding: 10px 25px;
+  margin: 35px auto 0;
+  color: white;
+  background-color: var(--main-color);
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+  animation: pulse 2s infinite;
+  -webkit-animation: pulse 2s infinite;
+}
+button.try-again:hover {
+  opacity: 0.8;
+  transform: scale(1.07);
+  -webkit-transform: scale(1.07);
+  -moz-transform: scale(1.07);
+  -ms-transform: scale(1.07);
+  -o-transform: scale(1.07);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgb(0 0 0 / 10%);
+  }
+  100% {
+    box-shadow: 0 0 0 25px rgb(0 0 0 / 0%);
+  }
+}
+div.footer {
+  padding: 15px 0;
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  background-color: var(--main-color);
+}
+
+@media (max-width: 767px) {
+  div.header {
+    font-size: 23px;
+  }
+  div.header::after {
+    font-size: 11px;
+  }
+  .game .the-word {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 450px) {
+  .startgame button.start-button {
+    padding: 12px 30px;
+    font-size: 20px;
+  }
+  div.header {
+    font-size: 20px;
+  }
+  div.header::after {
+    font-size: 7px;
+  }
+  div.header i:first-child {
+    display: none;
+  }
+  button.try-again {
+    margin: 15px auto 50px;
+    font-size: 15px;
+  }
+  .game .info .level span:first-of-type,
+  .game .info .seconds-left span:first-of-type,
+  .game .control .score span:first-of-type,
+  .game .control .time span:first-of-type {
+    font-size: 16px;
+  }
+  div.footer {
+    font-size: 14px;
+  }
+}
